@@ -1,12 +1,16 @@
 import { useState } from 'react'
+import Carousel from './Carousel.jsx'
+import './ProductLineLayout.css'
 
-function ProductLineLayout() {
+function ProductLineLayout({ children , title = "Featured Items", link = ""}) {
   const [count, setCount] = useState(0);
-  const title = 'Featured';
     return (
         <>
-        <div>
-            
+        <div className='productline' style={{ backgroundImage: `url('${link}')` }}>
+          <h3 className='title'>{title}</h3>
+            <Carousel>
+              {children}
+            </Carousel>
         </div>
     </>
     )
