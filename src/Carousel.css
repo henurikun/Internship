@@ -28,13 +28,13 @@
 
 .Carousel-Wrapper {
     position: relative; /* Anchor for the buttons */
-    width: 100%;
+    width: 100vh;
     padding: 0 40px; /* Space for buttons on the sides */
 }
 
 .Carousel-Window {
-    overflow: hidden; /* This is what "stores" the exceeding items */
-    width: 100%;
+    overflow: hidden;
+    width: 100vh;
 }
 
 .Carousel-Track {
@@ -43,9 +43,7 @@
 }
 
 .sample {
-    width: 20px;
-    height: 20px;
-    background-color: black;
+    width:100%;
     border: 1px white solid;
 }
 

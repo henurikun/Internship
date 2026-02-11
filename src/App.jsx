@@ -1,34 +1,51 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import * as XLSX from 'xlsx';
 import ProductLineLayout from './ProductLineLayout.jsx'
 //import Carousel from './Carousel.jsx'
 import Header from './Header.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const products = ['Laptop', 'Phone', 'Headphones'];
+  const [products, setProducts] = useState([]);
   const banners = ['./public/332117591_570042271509661_1379602674492217920_n.png', 'Banner2'];
   const brands = ['brand1', 'brand2'];
   const brands2 = ['brand1', 'brand2'];
+
+  useEffect(() => {
+    const fetchExcelData = async () => {
+      // 1. Fetch the file from the public folder
+      const response = await fetch('../4rmtech 021126.xlsx');
+      const data = await response.arrayBuffer();
+
+      // 2. Parse the Excel file
+      const workbook = XLSX.read(data, { type: 'array' });
+
+      // 3. Get the first sheet
+      const sheetName = workbook.SheetNames[0];
+      const worksheet = workbook.Sheets[sheetName];
+
+      // 4. Convert sheet to JSON
+      const json = XLSX.utils.sheet_to_json(worksheet);
+      const limitedProducts = json.slice(0, 10);
+      setProducts(limitedProducts);
+    };
+
+    fetchExcelData();
+  }, []);
 
   return (
     <>
       <Header />
       <h2>New Arrivals</h2>
       <ProductLineLayout title="Featured Laptops">
-        {/* {products.map((item, index) => (
-          <div className='item' key={index}>
-            <div>
-              <div className='item.image'>
-
-              </div>
-              <div className=''>
-              </div>
-            </div>
-          </div>
-        ))} */}
+        {products.map((item, index) => (
+        <div className='sample' key={index}>
+          <p>{item.ItemName}</p> 
+          <img src={`/${item.ImageName}`} alt={item.ItemName} />
+        </div>
+      ))}
       </ProductLineLayout>
       {/* <Carousel>
         {banners.map((banner, index) => (
