@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import * as XLSX from 'xlsx';
 import ProductLineLayout from './ProductLineLayout.jsx'
-//import Carousel from './Carousel.jsx'
+import Carousel from './Carousel.jsx'
 import Header from './Header.jsx'
 
 function App() {
@@ -13,39 +13,91 @@ function App() {
   const brands = ['brand1', 'brand2'];
   const brands2 = ['brand1', 'brand2'];
 
-  useEffect(() => {
-    const fetchExcelData = async () => {
-      // 1. Fetch the file from the public folder
-      const response = await fetch('../4rmtech 021126.xlsx');
-      const data = await response.arrayBuffer();
+  // useEffect(() => {
+  //   const fetchExcelData = async () => {
+  //     // 1. Fetch the file from the public folder
+  //     const response = await fetch('../4rmtech 021126.xlsx');
+  //     const data = await response.arrayBuffer();
 
-      // 2. Parse the Excel file
-      const workbook = XLSX.read(data, { type: 'array' });
+  //     // 2. Parse the Excel file
+  //     const workbook = XLSX.read(data, { type: 'array' });
 
-      // 3. Get the first sheet
-      const sheetName = workbook.SheetNames[0];
-      const worksheet = workbook.Sheets[sheetName];
+  //     // 3. Get the first sheet
+  //     const sheetName = workbook.SheetNames[0];
+  //     const worksheet = workbook.Sheets[sheetName];
 
-      // 4. Convert sheet to JSON
-      const json = XLSX.utils.sheet_to_json(worksheet);
-      const limitedProducts = json.slice(0, 10);
-      setProducts(limitedProducts);
-    };
+  //     // 4. Convert sheet to JSON
+  //     const json = XLSX.utils.sheet_to_json(worksheet);
+  //     const limitedProducts = json.slice(0, 10);
+  //     setProducts(limitedProducts);
+  //   };
 
-    fetchExcelData();
-  }, []);
+  //   fetchExcelData();
+  // }, []);
 
   return (
     <>
       <Header />
       <h2>New Arrivals</h2>
-      <ProductLineLayout title="Featured Laptops">
-        {products.map((item, index) => (
-        <div className='sample' key={index}>
-          <p>{item.ItemName}</p> 
-          <img src={`/${item.ImageName}`} alt={item.ItemName} />
-        </div>
-      ))}
+      <ProductLineLayout title="Featured Laptops" >
+        <div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div>
+        <div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div>
+        <div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div>
+        <div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div>
+        <div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div>
+        <div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div><div style={{ 
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')" 
+  }}></div>
       </ProductLineLayout>
       {/* <Carousel>
         {banners.map((banner, index) => (

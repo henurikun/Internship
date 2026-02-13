@@ -1,44 +1,33 @@
-import { useState, Children } from 'react'
-import './Carousel.css'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import './Carousel.css';
 
 function Carousel({ children }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const totalSlides = Children.count(children);
-  const visibleItems = 6;
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) =>
-      prev >= totalSlides - visibleItems ? 0 : prev + 1
-    );
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? totalSlides - visibleItems : prev - 1
-    );
-  };
   return (
-    <>
-      <div className='Carousel-Wrapper'>
-        {/* 1. The "Window" that hides the extra items */}
-        <div className='Carousel-Window'>
-
-          {/* 2. The "Track" that actually moves */}
-          <div
-            className='Carousel-Track'
-            style={{ transform: `translateX(-${currentIndex * (100 / visibleItems)}%)` }}
-          >
-            {children}
-          </div>
-
-        </div>
-
-        {/* 3. Navigation Buttons (placed outside the window so they stay put) */}
-        <button onClick={prevSlide} className="left button"> {" < "} </button>
-        <button onClick={nextSlide} className="right button"> {" > "} </button>
-      </div>
-    </>
-  )
+    <Swiper
+      // Instead of 'new Swiper', we pass settings as props
+      modules={[Navigation, Pagination, Scrollbar]}
+      spaceBetween={5}
+      slidesPerView={3} // Shows 6 items at a time
+      navigation
+      loop={false}
+    >
+      {/* CRITICAL: Each item in your products array 
+         MUST be wrapped in a <SwiperSlide> 
+      */}
+      {children.map((child, index) => (
+        <SwiperSlide key={index}>
+          {child}
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
 }
 
-export default Carousel
+export default Carousel;
