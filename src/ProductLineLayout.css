@@ -1,11 +1,23 @@
 .productline {
-    /* (100% divided by 6 items) */
+    display: flex;
+    flex-direction: row;
     flex: 0 0 calc(100% / 6); 
     position: relative;
     width: 75%;
     height: 40vh;
     background-color: #000000;
+    justify-content: space-evenly;
 }
 .title{
     color: white;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 10%;
+    background: linear-gradient(90deg,rgb(0, 158, 211) 0%, rgb(0, 144, 192) 50%, rgb(0, 140, 187) 100%);
+    cursor: pointer;
 }

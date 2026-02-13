@@ -7,7 +7,9 @@ function ProductLineLayout({ children , title = "Featured Items", link = ""}) {
     return (
         <>
         <div className='productline' style={{ backgroundImage: `url('${link}')` }}>
-          <h3 className='title'>{title}</h3>
+          <div><h2 className='title'>{title}</h2>
+            <div className='button'>Browse</div>
+          </div>
             <Carousel>
               {children}
             </Carousel>

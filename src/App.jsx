@@ -6,6 +6,7 @@ import * as XLSX from 'xlsx';
 import ProductLineLayout from './ProductLineLayout.jsx'
 import Carousel from './Carousel.jsx'
 import Header from './Header.jsx'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -38,6 +39,7 @@ function App() {
   return (
     <>
       <Header />
+      <div className='supercontainer'>
       <h2>New Arrivals</h2>
       <ProductLineLayout title="Featured Laptops" >
         <div style={{ 
@@ -252,6 +254,7 @@ function App() {
     </Carousel>
     SAMPLE CAROUSEL FOR LAPTOP BRANDS
     */}
+    </div>
       <footer>
         {/* INSERT FOOTER CONTENT HERE */}
       </footer>
