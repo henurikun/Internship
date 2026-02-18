@@ -1,11 +1,13 @@
 import Header from './Header.jsx'
 
-function Items() {
+function Item() {
+
     return (
         <>
         <Header/>
-        
         {}
         </>
     )
 }
+
+export default Item;

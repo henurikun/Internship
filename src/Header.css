@@ -1,16 +1,20 @@
 header {
+    background: linear-gradient(0deg,rgb(1,48,63) 0%, rgb(2,87,122) 50%, rgb(2,169,247) 100%);
     display: flex;
     flex-direction: column;
+    position:sticky;
 }
 
 .headertop {
-    background: linear-gradient(0deg,rgb(1,48,63) 0%, rgb(2,87,122) 50%, rgb(2,169,247) 100%);
     margin: 0;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     padding-top:2rem;
     padding-bottom: 2rem;
+    padding-right: 2rem;
     gap:5rem;
+    align-items: center;
 }
 
 .headerbottom-container {
@@ -21,6 +25,55 @@ header {
     flex-direction: row;
     justify-content: center;
     height:50%;
+}
+
+.search {
+    background-color: rgb(0, 0, 131);
+    border: 0 transparent;
+    cursor: pointer;
+    padding: 0 10px 0 10px;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.shopcart {
+    background-color: transparent;
+    border: 0 transparent;
+    cursor: pointer;
+}
+
+.profile {
+    background-color: transparent;
+    border: 0 transparent;
+    cursor: pointer;
+}
+
+.searchBar {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height:40px;
+    width:100%;
+    font-size: 15px;
+    padding: 0 1rem 0 1rem;
+    outline: none;
+    border: none; 
+}
+
+.cart-container {
+    display:flex;
+    flex-direction: row;
+    gap:1rem;
+}
+
+.searchBar-container {
+    display: flex;
+    flex-direction: row;
+    width:55%;
+}
+
+.searchBar:focus {
+    outline: none;
+    border: none;
 }
 
 img {
@@ -42,6 +95,5 @@ img {
     color:white;
     size:20px;
     font-weight: 300;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2rem;
 }
