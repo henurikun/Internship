@@ -1,9 +1,15 @@
 import { useState } from 'react'
 import './Header.css'
 import logo from './assets/logo.png'
+import Login from './Login.jsx';
 
 function Header() {
     const [count, setCount] = useState(0);
+
+    const LoginModal = () => {
+        return ( <>
+        </>)
+    }
 
     return (
         <>
@@ -29,7 +35,7 @@ function Header() {
                     </div>
 
                     <div className='cart-container'>
-                        <button className='profile'><svg
+                        <button className='profile' onClick={'/'}><svg
                             width="24"
                             height="24"
                             viewBox="0 0 24 24"
