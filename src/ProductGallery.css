@@ -1,0 +1,54 @@
+.gallery-layout {
+  display: flex;
+  gap: 20px;
+  max-width: 900px;
+  padding: 10px;
+}
+
+/* Thumbnail Sidebar */
+.thumb-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 75px; /* Fixed width for the column */
+}
+
+.thumb-item {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Forces a perfect square */
+  object-fit: contain; /* Keeps the product image from stretching */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.thumb-item.is-active {
+  border: 2px solid #0000FF; /* The blue selection border */
+}
+
+/* Main Display */
+.feature-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #f0f0f0; /* Subtle border like the image */
+  padding: 20px;
+}
+
+.feature-img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Matches the square thumbnail logic */
+  object-fit: contain;
+  max-height: 500px;
+}
+
+.zoom-hint {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

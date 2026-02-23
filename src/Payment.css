@@ -1,0 +1,21 @@
+.buy-button {
+    border: 0 none transparent;
+    border-radius:5px;
+    cursor: pointer;
+    background-color: #007dfe;
+    color: white;
+    padding: 10px 20px;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay:0s ;
+}
+
+.buy-button:hover {
+    background-color: rgb(0, 0, 255);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+}

@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import * as XLSX from 'xlsx';
 import ProductLineLayout from './ProductLineLayout.jsx'
 import Carousel from './Carousel.jsx'
+import Item from './Item.jsx'
 import Header from './Header.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -14,7 +13,7 @@ function App() {
   const brands = ['brand1', 'brand2'];
   const brands2 = ['brand1', 'brand2'];
 
-  // useEffect(() => {
+  // useEffect(() => { //MOGANA NI
   //   const fetchExcelData = async () => {
   //     // 1. Fetch the file from the public folder
   //     const response = await fetch('../4rmtech 021126.xlsx');
@@ -39,78 +38,45 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Header />} /> */}
         {/* The :category part is a variable placeholder */}
         <Route path="/item/:id" element={<Item />} />
       </Routes>
       <Header />
       <div className='supercontainer'>
-        <h2>New Arrivals</h2>
-        <ProductLineLayout title="Featured Laptops" >
-          <div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div>
-          <div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div>
-          <div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div>
-          <div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div>
-          <div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div>
-          <div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div><div style={{
-            backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-          }}></div>
-        </ProductLineLayout>
-        {/* <Carousel>
-        {banners.map((banner, index) => (
-          <img key={index} src={banner} />
-        ))}
-      </Carousel> */}
+        <div>
+          <h2>New Arrivals</h2>
+          <ProductLineLayout title="Featured Laptops" >
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+          </ProductLineLayout>
+        </div>
+        <div>
+          <Carousel>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+          </Carousel>
+        </div>
         {/* <div className='flex row container'>
         <div className='image item1'>
           <button name='Shop Now'></button>
@@ -172,16 +138,29 @@ function App() {
           <button name='Shop Now'></button>
         </div>
       </div> */}
-        {/* <ProductLine>
-      {products.map((item, index) => (
-        <li key={index} className="p-2 border-b">
-          {item}
-        </li>
-      ))}
-    </ProductLine>
-    SAMPLE PRODUCT LINE FOR Featured Laptops
-    */}
-
+        <div>
+          <ProductLineLayout>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+          </ProductLineLayout>
+          {/* SAMPLE PRODUCT LINE FOR Featured Laptops */}
+        </div>
         {/* <Carousel>
       {banners.map((banner, index) => (
         <img key={index} src={banner}></img>

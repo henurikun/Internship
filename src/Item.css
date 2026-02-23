@@ -2,3 +2,34 @@ body {
     margin:0;
     padding:0;
 }
+
+.container {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-preview {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:75%;
+}
+
+.payment {
+    background-color: rgba(255, 255, 255, 0.500);
+    border:1px solid rgba(97, 97, 97, 0.500);
+    padding:5%;
+    width:50%;
+}
+
+.product-gallery {
+    width:50%;
+}
+
+.description {
+    background-color: rgba(255, 255, 255, 0.500);
+    border:1px solid rgba(97, 97, 97, 0.500);
+    width:75%;
+}
