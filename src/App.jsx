@@ -6,6 +6,7 @@ import Carousel from './Carousel.jsx'
 import Item from './Item.jsx'
 import Header from './Header.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import myImage from './assets/1.png';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -44,7 +45,7 @@ function App() {
       </Routes>
       <Header />
       <div className='supercontainer'>
-        <div>
+        <div className='productline2'>
           <h2>New Arrivals</h2>
           <ProductLineLayout title="Featured Laptops" >
             <div style={{
@@ -53,19 +54,23 @@ function App() {
             <div style={{
               backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
             }}></div>
+            <div style={{ backgroundImage: `url(${myImage})` 
+            }}>
+              <img/>
+              <p>1000</p>
+            </div>
             <div style={{
               backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
             }}></div>
           </ProductLineLayout>
         </div>
-        <div>
+        <div className='supercontainer box5'>
           <Carousel>
-            <div style={{
+            <span slot="container-start" style={{ backgroundImage: `url(${myImage})` }}
+            ></span>
+            <span slot="container-end" style={{
               backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-            }}></div>
-            <div style={{
-              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-            }}></div>
+            }}></span>
             <div style={{
               backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
             }}></div>
@@ -138,10 +143,15 @@ function App() {
           <button name='Shop Now'></button>
         </div>
       </div> */}
-        <div>
-          <ProductLineLayout>
+        <div className='productline2'>
+          <ProductLineLayout title="Featured PC's" >
             <div style={{
               backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+            <div style={{ backgroundImage: `url(${myImage})` 
             }}></div>
             <div style={{
               backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
@@ -152,14 +162,8 @@ function App() {
             <div style={{
               backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
             }}></div>
-            <div style={{
-              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-            }}></div>
-            <div style={{
-              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-            }}></div>
+            
           </ProductLineLayout>
-          {/* SAMPLE PRODUCT LINE FOR Featured Laptops */}
         </div>
         {/* <Carousel>
       {banners.map((banner, index) => (
@@ -178,6 +182,22 @@ function App() {
     </ProductLine>
     SAMPLE PRODUCT LINE FOR Featured Computer Peripherals & Accessories
     */}
+        <div className='productline2'>
+          <h2>New Arrivals</h2>
+          <ProductLineLayout title="Featured Laptops" >
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+            <div style={{ backgroundImage: `url(${myImage})` 
+            }}></div>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}></div>
+          </ProductLineLayout>
+        </div>
 
         {/* <div className='flex grid'>
         {brands.map((brand, index) => (

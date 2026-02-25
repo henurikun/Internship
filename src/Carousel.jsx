@@ -12,6 +12,7 @@ function Carousel({ children }) {
   return (
     <Swiper
       // Instead of 'new Swiper', we pass settings as props
+      height={400}
       modules={[Navigation, Pagination, Scrollbar]}
       spaceBetween={5}
       slidesPerView={3} // Shows 6 items at a time

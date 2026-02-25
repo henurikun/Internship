@@ -6,13 +6,21 @@
     width: 75%;
     height: 40vh;
     background-color: #000000;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin: 2% 10% 3% 10%;
+    padding:1% 1% 1% 1%;
+    border-radius: 10px;
 }
 .title{
     color: white;
 }
 
+.feature-titi{
+    width: 30%;
+}
 .button {
+    border-radius:5px ;
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
