@@ -71,25 +71,25 @@ function Header() {
                 <nav className='headerbottom-container'>
                     <ul className='navbar-list'>
                         <li>
-                            <a href="">Home</a>
+                            <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <a href="">PC</a>
+                            <Link to="/item/">PC</Link>
                         </li>
                         <li>
-                            <a href="">Laptops</a>
+                            <Link to="/">Laptop</Link>
                         </li>
                         <li>
-                            <a href="" className='dropdown'>Accessories</a>
+                            <Link to="/">Accessories</Link>
                         </li>
                         <li>
-                            <a href="">More Essentials</a>
+                            <Link to="/">Essentials</Link>
                         </li>
                         <li>
-                            <a href="">Pre-Orders</a>
+                            <Link to="/">Pre-Order</Link>
                         </li>
                         <li>
-                            <a href="">Promos</a>
+                            <Link to="/">Promo</Link>
                         </li>
                         <li>
 

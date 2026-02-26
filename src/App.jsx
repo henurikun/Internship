@@ -7,6 +7,7 @@ import Item from './Item.jsx'
 import Header from './Header.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import myImage from './assets/1.png';
+import myImage2 from './assets/1.jpg';
 
 function Home() {
   return (
@@ -17,20 +18,33 @@ function Home() {
           <h2>New Arrivals</h2>
           <ProductLineLayout title="Featured Laptops" >
             <div style={{
-              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-            }}></div>
-            <div style={{
-              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-            }}></div>
-            <div style={{ backgroundImage: `url(${myImage})` 
-            }}>
-              <img/>
-              <p style={{paddingTop:'20px'
-              }}>1000</p>
+              backgroundImage: "url('/2.jpg')"
+            }}> <img src='/3.jpg' className='photo'/>
+              <span>₱1000</span>
+              <p></p>
+              <button to="/item/" className='butt'>add to cart</button>
             </div>
             <div style={{
               backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
-            }}></div>
+            }}> <img/>
+              <span>₱1000</span>
+              <p></p>
+              <button to="/" className='butt'>add to cart</button>
+            </div>
+            <div style={{ backgroundImage: `url(${myImage})` 
+            }}>
+              <img src={myImage2} className='photo'/>
+              <span>₱1000</span>
+              <p></p>
+              <button to="/" className='butt'>add to cart</button>
+            </div>
+            <div style={{
+              backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
+            }}> <img/>
+              <span>₱1000</span>
+              <p></p>
+              <button to="/" className='butt'>add to cart</button>
+            </div>
           </ProductLineLayout>
         </div>
         <div className='supercontainer box5'>
@@ -268,7 +282,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         {/* The :category part is a variable placeholder */}
-        <Route path="/item/:id" element={<Item />} />
+        <Route path="/item/" element={<Item />} />
       </Routes>
     </>
   )

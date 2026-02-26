@@ -20,3 +20,31 @@ body {
 .productline2 > h2{
   text-align: center;
 }
+.butt{
+  background-color: rgb(99, 168, 224);
+  border-radius: 5px;
+  padding: 6px;
+  border: 1px;
+}
+.butt:hover{
+  cursor: pointer;
+}
+.photo {
+  /* Properly formatted transition: property | duration | timing */
+  transition: opacity 0.3s ease-in-out;
+  
+  /* Use object-fit or background-size instead of fit-content */
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 56%;
+  width: 100%;
+  opacity: 1; /* Fully visible by default */
+  padding: 1px;
+}
+
+.photo:hover {
+  /* This creates the 'fade off' effect */
+  opacity: 0; /* Change to 0.5 if you want it to just go dim */
+}
