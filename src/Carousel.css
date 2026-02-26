@@ -82,6 +82,7 @@
     width: 100px;
     height: 100px;
     top: 50%;
+    opacity: -1;
 }
 
 .swiper-button-next svg,

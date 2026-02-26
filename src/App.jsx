@@ -57,7 +57,8 @@ function App() {
             <div style={{ backgroundImage: `url(${myImage})` 
             }}>
               <img/>
-              <p>1000</p>
+              <p style={{paddingTop:'20px'
+              }}>1000</p>
             </div>
             <div style={{
               backgroundImage: "url('https://cdn.pixabay.com/photo/2016/07/28/02/02/greece-1546902_960_720.jpg')"
