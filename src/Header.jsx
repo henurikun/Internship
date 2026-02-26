@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './Header.css'
 import logo from './assets/logo.png'
 import Login from './Login.jsx';
+import { Link } from 'react-router-dom';
 
 function Header() {
     const [count, setCount] = useState(0);
